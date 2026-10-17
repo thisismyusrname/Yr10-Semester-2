@@ -70,3 +70,44 @@ print(f"The second number you stored is {num2}")
 
 sum = num1 + num2
 print(f"Your numbers added together result in {sum}.")
+
+# V1.4 Checking for a valid input using try/except method
+# Using parameters (placeholders)
+#Function that asks user to enter a number from a range
+def valid_num(question,low,high):
+    error = f"Whoops, that is not an integer between {low} and {high}."
+    while True:
+        try:
+            response = int(input(question))
+            # if the response >= to the low number or <= high number, then continue
+            if low <= response <= high:
+                break # Stop the loop
+
+            else:
+                print(f"{error}\n")
+                
+        except ValueError: 
+            print(error)
+    return response # This makes the response available
+                    #to be used outside the function
+                
+# Main routine 
+if __name__=="__main__":
+
+    num1 = valid_num("Enter a number between 1 and 10: ",1,10)
+    print(f"The number you entered is {num1}. \n")
+
+    num2 = valid_num("Enter a number between 15 and 20", 15,20)
+     print(f"The number you entered is {num2}. \n")
+
+    num3 = valid_num("Enter a number between 70 and 90", 70,90)
+    print(f"The number you entered is {num3}. \n")
+
+    #Multiply the result of the num1, num2, and num3
+    multiply = num 1 * num2 * num3 
+    print(f"Your three numbers multiplied together result in {multiply}".)
+
+    # Adding the numbers
+    sum = num1 + num2 +num3
+    print(f"Your numbers added together result in {sum}.")
+    
