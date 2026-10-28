@@ -1,3 +1,4 @@
+#Author: Isabella
 def number_check(question):
     error = "Please enter a number that is more than zero\n"
     while True:
@@ -19,9 +20,9 @@ def number_check(question):
 keep_going = ""
 while keep_going == "":
     print(f"Welcome to Fence Cost Calculator")
-#Width"
+#Ask user for width"
     width = number_check((f"Enter Width: "))
-#Length
+#Ask user for length
     length = number_check((f"Enter Length: "))
     print()
 #Calculate the perimeter
@@ -29,7 +30,7 @@ while keep_going == "":
 #Display result
     print(f"Perimeter={perimeter}m")
     print()
-#Cost per m
+#Ask user for cost per m
     price_per_m = number_check("Price per m: ")
     print()
 # Calculate Cost for the fence
